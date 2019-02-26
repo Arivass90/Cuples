@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicio"
+            android:icon="@drawable/imghome"
+            android:title="@string/inicio" />
+        <item
+            android:id="@+id/carnevip"
+            android:icon="@drawable/imgcarne"
+            android:title="@string/carne_vip" />
+        <item
+            android:id="@+id/calendario"
+            android:icon="@drawable/imgcalendario"
+            android:title="@string/calendario" />
+        <item
+            android:id="@+id/galeria"
+            android:icon="@drawable/imgalbum"
+            android:title="@string/galeria" />
+        <item
+            android:id="@+id/testcompatibilidad"
+            android:icon="@drawable/imgtest"
+            android:title="@string/test_de_compatibilidad" />
+
+        <item
+            android:id="@+id/contacto"
+            android:icon="@drawable/imgcontacto"
+            android:title="@string/contacto" />
+        <item
+            android:id="@+id/salir"
+            android:icon="@drawable/imgsalir"
+            android:title="@string/salir" />
+
+    </group>
+</menu>
+
+
