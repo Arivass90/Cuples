@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper1">
@@ -70,29 +71,54 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <Button
+        android:id="@+id/BtnLoginGoogle"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/logingoogle"
+        android:textColor="@color/colorText"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.633" />
+
+    <Button
         android:id="@+id/BtnLogin"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/login"
         android:textColor="@color/colorText"
         app:backgroundTint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/BtnRegistro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnPass" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.633" />
+
 
     <Button
         android:id="@+id/BtnRegistro"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/registrarse"
         android:textColor="@color/colorText"
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/BtnPass"
+        app:layout_constraintVertical_bias="0.389" />
 
 </android.support.constraint.ConstraintLayout>
