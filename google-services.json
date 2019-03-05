@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "613829038303",
+    "firebase_url": "https://cuples-final.firebaseio.com",
+    "project_id": "cuples-final",
+    "storage_bucket": "cuples-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613829038303:android:634bb0b775b6044d",
+        "android_client_info": {
+          "package_name": "com.example.alexr.couples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613829038303-pfmtpsag5cj70qkvmhj98r07emtbse6v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alexr.couples",
+            "certificate_hash": "ec25fab3b503a41cfa18ae4cf9df9a4b44c0ac3f"
+          }
+        },
+        {
+          "client_id": "613829038303-l3qg1toq82vga0ls7r8jcd1fss664rrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTk4odB5ZdUxd-kRT9bLSUAbXx1UdXESE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613829038303-l3qg1toq82vga0ls7r8jcd1fss664rrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
