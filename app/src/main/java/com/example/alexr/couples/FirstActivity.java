@@ -31,6 +31,13 @@ public class FirstActivity extends AppCompatActivity {
         }
         });
 
+        {
+            img = findViewById(R.id.Logo);
+            Glide.with(this)
+                    .load(R.drawable.logocuples_png)
+                    .into(img);
+        }
+
         findViewById(R.id.BtnLogin).setOnClickListener( new View.OnClickListener() {
          @Override
          public void onClick(View w) {
@@ -81,13 +88,6 @@ public class FirstActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 comeIn(); }
         }}
-
-        {
-            img = findViewById(R.id.Logo);
-            Glide.with(this)
-            .load(R.drawable.logocuples_png)
-            .into(img);
-        }
 
         @Override
         public boolean onOptionsItemSelected (MenuItem item){

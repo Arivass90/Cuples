@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:focusableInTouchMode="false"
         android:scaleType="centerCrop"
-        android:src="@drawable/wallpaper1"
+        android:src="@drawable/wallpaper"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

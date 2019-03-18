@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper1">
+    android:background="@drawable/wallpaper">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -33,7 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Logo"
-        android:autofillHints=""
         android:inputType="" />
 
     <EditText
@@ -50,8 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnEmail"
-        android:inputType=""
-        android:autofillHints="" />
+        android:inputType=""/>
 
     <ImageButton
         android:id="@+id/Logo"
