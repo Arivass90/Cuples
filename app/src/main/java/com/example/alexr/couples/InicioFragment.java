@@ -25,12 +25,6 @@ ImageView img1;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_inicio, container, false);
-        img= rootView.findViewById(R.id.Iniciofondo);
-        Glide.with(this)
-                .load(R.drawable.wallpaper)
-
-                .into(img);
-
         img1= rootView.findViewById(R.id.imgcangrejo);
         Glide.with(this)
                 .load(R.drawable.imgcangrejo)

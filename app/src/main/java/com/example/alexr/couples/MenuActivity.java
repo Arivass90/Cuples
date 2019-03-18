@@ -2,6 +2,7 @@ package com.example.alexr.couples;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -14,9 +15,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+    implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
+    TextView tvUsername;
+    TextView tvUseremail;
+    ImageView ivUserAvatar;
+    FirebaseAuth firebaseAuth;
+    FirebaseAuth.AuthStateListener firebaseAuthListener;
+    GoogleApiClient googleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +44,6 @@ public class MenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -37,8 +56,60 @@ public class MenuActivity extends AppCompatActivity
 
         FragmentManager FragmentManager = getSupportFragmentManager();
         FragmentManager.beginTransaction().replace(R.id.contenedor,new InicioFragment()).commit();
+
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        View header = navigationView.getHeaderView(0);
+        tvUsername =  header.findViewById(R.id.username);
+        ivUserAvatar= header.findViewById(R.id.useravatar);
+        tvUseremail= header.findViewById(R.id.useremail);
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser != null) {
+            tvUsername.setText(firebaseUser.getDisplayName());
+            tvUseremail.setText(firebaseUser.getEmail());
+            Glide.with(this)
+                    .load(firebaseUser.getPhotoUrl().toString())
+                    .into(ivUserAvatar);
+        }
+        if (firebaseAuthListener == null) {
+            firebaseAuth = FirebaseAuth.getInstance();
+            firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
+
+                @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    setUserData(user);
+                } else {
+                    goLogInScreen();
+                }
+            }
+        };
+    }
+        if (googleApiClient == null) {
+            googleApiClient = new GoogleApiClient.Builder(this)
+                    .enableAutoManage(this, this)
+                    .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                    .build();
+        }
     }
 
+    private void setUserData(FirebaseUser user) {
+        if (user != null) {
+            tvUsername.setText(user.getDisplayName());
+            Glide.with(this).load(user.getPhotoUrl()).into(ivUserAvatar);
+        }
+    }
+    private void goLogInScreen() {
+        Intent i = new Intent ( this, FirstActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -78,6 +149,7 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
         FragmentManager FragmentManager = getSupportFragmentManager();
 
+
         if (id == R.id.inicio) {
             FragmentManager.beginTransaction().replace(R.id.contenedor,new InicioFragment()).commit();
 
@@ -96,13 +168,26 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.contacto) {
             FragmentManager.beginTransaction().replace(R.id.contenedor,new ContactoFragment()).commit();
 
-        } else if (id == R.id.salir) {
-            finish();
+        } else if (id == R.id.sign_out) {
+
+            AuthUI.getInstance()
+                    .signOut(MenuActivity.this)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        public void onComplete(@NonNull Task<Void> task) {
+                            startActivity(new Intent(MenuActivity.this, FirstActivity.class));
+                            finish();
+                        }
+                    });
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
 }

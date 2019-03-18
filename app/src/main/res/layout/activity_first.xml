@@ -28,12 +28,13 @@
         android:layout_marginBottom="13dp"
         android:background="@android:drawable/dialog_holo_light_frame"
         android:hint="@string/email"
+        android:inputType=""
         android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/BtnPass"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo"
-        android:inputType="" />
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
     <EditText
         android:id="@+id/BtnPass"
@@ -67,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-    <Button
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
         android:id="@+id/BtnLoginGoogle"
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -75,29 +76,31 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/logingoogle"
-        android:textColor="@color/colorText"
-        app:backgroundTint="@color/colorAccent"
+        android:background="@color/colorAccent"
+        android:text="Sign in with Google"
+        app:isDarkTheme="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BtnLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.708" />
 
     <Button
         android:id="@+id/BtnLogin"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/login"
         android:textColor="@color/colorText"
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnLoginGoogle"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.708" />
 
 
     <Button
@@ -116,6 +119,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnPass"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.566" />
 
 </android.support.constraint.ConstraintLayout>

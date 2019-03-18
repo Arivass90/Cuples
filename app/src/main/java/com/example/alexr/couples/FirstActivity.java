@@ -30,7 +30,7 @@ public class FirstActivity extends AppCompatActivity {
         signIn();
         }
         });
-
+        comeIn();
         {
             img = findViewById(R.id.Logo);
             Glide.with(this)
@@ -66,7 +66,7 @@ public class FirstActivity extends AppCompatActivity {
     void comeIn(){
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if (firebaseUser != null) {
-            startActivity(new Intent(this, HeaderGoogle.class));
+            startActivity(new Intent(this, MenuActivity.class));
             finish();
         }
     }

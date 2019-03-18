@@ -30,7 +30,7 @@
             android:icon="@drawable/imgcontacto"
             android:title="@string/contacto" />
         <item
-            android:id="@+id/salir"
+            android:id="@+id/sign_out"
             android:icon="@drawable/imgsalir"
             android:title="@string/salir" />
 
