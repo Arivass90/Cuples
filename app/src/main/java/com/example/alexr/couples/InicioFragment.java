@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 public class InicioFragment extends Fragment {
 
-    ImageView img1;
+    ImageView img1,img2,img3,img4,img5,img6;
 
     public InicioFragment(){
 
@@ -25,10 +25,35 @@ public class InicioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_inicio, container, false);
-        img1= rootView.findViewById(R.id.iB1);
-        Glide.with(this)
-              .load(R.drawable.party)
-               .into(img1);
+       // img1= rootView.findViewById(R.id.iB1);
+        //Glide.with(this)
+          //    .load(R.drawable.party)
+            //   .into(img1);
+
+        //img2= rootView.findViewById(R.id.iB2);
+        //Glide.with(this)
+          //      .load(R.drawable.party)
+            //    .into(img2);
+
+       // img3= rootView.findViewById(R.id.iB3);
+        //Glide.with(this)
+          //      .load(R.drawable.party)
+            //    .into(img3);
+
+        //img4= rootView.findViewById(R.id.iB4);
+        //Glide.with(this)
+          //      .load(R.drawable.party)
+            //    .into(img4);
+
+        //img5= rootView.findViewById(R.id.iB5);
+        //Glide.with(this)
+          //      .load(R.drawable.party)
+            //    .into(img5);
+        //img6= rootView.findViewById(R.id.iB6);
+        //Glide.with(this)
+          //      .load(R.drawable.party)
+            //    .into(img6);
+
 
         return rootView;
     }
