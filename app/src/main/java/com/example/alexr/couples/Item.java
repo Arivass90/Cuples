@@ -17,6 +17,5 @@ public class Item {
     public String getTitulo(){
         return titulo;
     }
-
 }
 

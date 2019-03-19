@@ -14,12 +14,12 @@ import com.bumptech.glide.Glide;
 
 public class InicioFragment extends Fragment {
 
+    ImageView img1;
 
     public InicioFragment(){
 
     }
-ImageView img;
-ImageView img1;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,9 +28,7 @@ ImageView img1;
         img1= rootView.findViewById(R.id.imgcangrejo);
         Glide.with(this)
                 .load(R.drawable.imgcangrejo)
-
                 .into(img1);
-
         return rootView;
     }
 

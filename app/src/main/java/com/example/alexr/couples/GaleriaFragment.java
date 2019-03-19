@@ -14,17 +14,16 @@ import com.bumptech.glide.Glide;
 
 public class GaleriaFragment extends Fragment {
 
+    ImageView img;
 
     public GaleriaFragment(){
 
     }
 
-    ImageView img;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_galeria, container, false);
-
         img= rootView.findViewById(R.id.Galeriafondo);
         Glide.with(this)
                 .load(R.drawable.wallpaper)

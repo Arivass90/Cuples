@@ -15,12 +15,13 @@ import com.bumptech.glide.Glide;
 public class CalendarFragment extends Fragment {
 
     Button BtnCalendar;
+    ImageView img;
+    ImageView img1;
 
     public CalendarFragment() {
     }
 
-    ImageView img;
-    ImageView img1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,7 +47,6 @@ public class CalendarFragment extends Fragment {
         });
 
         return rootView;
-
 
     }
 

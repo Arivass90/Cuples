@@ -14,7 +14,6 @@ import java.util.Calendar;
 
 public class CalendarFinal extends AppCompatActivity implements View.OnClickListener {
 
-
     Button volver;
     at.markushi.ui.CircleButton btncalendario;
     TextView fechafinal;
@@ -47,14 +46,11 @@ public class CalendarFinal extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-
-
         if (v == btncalendario) {
             final Calendar c = Calendar.getInstance();
             day = c.get(Calendar.DAY_OF_MONTH);
             month = c.get(Calendar.MONTH);
             year = c.get(Calendar.YEAR);
-
 
             final DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
@@ -71,8 +67,6 @@ public class CalendarFinal extends AppCompatActivity implements View.OnClickList
             }
                     ,day, month, year);
             datePickerDialog.show();
-
-
 
         }
     }

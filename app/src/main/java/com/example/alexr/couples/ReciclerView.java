@@ -42,17 +42,13 @@ public class ReciclerView extends AppCompatActivity {
                 toast.show();
                 Intent intent = new Intent(ReciclerView.this, GaleriaFragment.class);
                 startActivity(intent);
-
             }
         });
-
-
     }
 
     private ArrayList<Item> GetListItems(){
 
         ArrayList<Item> ListItems = new ArrayList<>();
-
         return ListItems;
     }
 

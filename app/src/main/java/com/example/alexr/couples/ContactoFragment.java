@@ -13,14 +13,12 @@ import com.bumptech.glide.Glide;
 
 public class ContactoFragment extends Fragment {
 
-
-    public ContactoFragment(){
-
-    }
-
     ImageView img;
     ImageView contacto;
     ImageView mapa;
+
+    public ContactoFragment(){
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

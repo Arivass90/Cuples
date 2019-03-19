@@ -17,12 +17,13 @@ import com.bumptech.glide.Glide;
 
 public class TestFragment extends Fragment {
 
+    ImageView imgcorazon;
+    ImageView img;
 
-    public TestFragment(){
+        public TestFragment(){
 
-    }
-        ImageView imgcorazon;
-        ImageView img;
+        }
+
          @Override
          public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

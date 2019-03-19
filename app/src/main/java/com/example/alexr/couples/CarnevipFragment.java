@@ -14,12 +14,11 @@ import com.bumptech.glide.Glide;
 
 public class CarnevipFragment extends Fragment {
 
+    ImageView img;
 
     public CarnevipFragment(){
-
     }
 
-    ImageView img;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
