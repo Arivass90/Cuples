@@ -25,10 +25,11 @@ public class InicioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_inicio, container, false);
-        img1= rootView.findViewById(R.id.imgcangrejo);
+        img1= rootView.findViewById(R.id.iB1);
         Glide.with(this)
-                .load(R.drawable.imgcangrejo)
-                .into(img1);
+              .load(R.drawable.party)
+               .into(img1);
+
         return rootView;
     }
 

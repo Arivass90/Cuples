@@ -1,67 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/Iniciofondo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="718dp"
+        android:background="@drawable/wallpaper"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Bienvenido a Cuples"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:layout_width="350dp"
-        android:layout_height="550dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorfondo"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
+
+        <ImageButton
+            android:id="@+id/iB1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/party" />
 
         <TextView
-            android:id="@+id/titleinicio"
+            android:id="@+id/Tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="CUPLES"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:layout_marginTop="15dp"
+            android:text="Novedades 1" />
+
+
+        <ImageButton
+            android:id="@+id/iB3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/party" />
 
         <TextView
-            android:id="@+id/textoinicio"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:padding="25dp"
-            android:textSize="12dp"
-            android:text="Si os habláramos de la media naranja...¿Qué imagen os vendría a la cabeza?La mitad de una persona, divagando por la vida, con el pensamiento y la necesidad de encontrar a alguien que le complemente.Seguramente esa persona a lo largo de su vida cumplirá todas sus metas profesionales,se sentirá satisfecho y orgulloso de sí mismo,pero con un hándicap… la soledad.¿Por qué es así? Porque durante toda la vida nos han inculcado que una persona no está completa ni es feliz hasta que no llega alguien con sus mismos intereses y expectativas. Nos han enseñado que nuestra felicidad es plena si la compartimos con alguien, porque nuestros logros profesionales si no están acompañados con los personales no tienen el mismo valor.Y yo ahora os formulo una pregunta… ¿Habéis escuchado hablar de la media langosta?
-            De primeras podéis pensar, las langostas y el amor tienen la misma relación que el tocino y la velocidad.Pero no es así… ¿Y sabéis por qué? Porque las langostas son una, no son la mitad de algo o de alguien, no esperan para encontrar su otra mitad para vivir felices.Las langostas se enamoran y se juntan. Y dicen que se pueden ver adorables parejas paseando en los viveros,cogidas de las pinzas para toda la vida.
-            Y esto señores y señoras es lo que ofrecemos en Cuple’s.
+            android:id="@+id/Tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Novedades 3" />
 
-            Encontrar vuestra media langosta." />
 
-        <ImageView
-            android:id="@+id/imgcangrejo"
-            android:layout_width="200dp"
-            android:layout_height="117dp"
-            android:layout_alignTop="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="433dp"
-            android:background="@null" />
-    </RelativeLayout>
+        <ImageButton
+            android:id="@+id/iB5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/party" />
 
+        <TextView
+            android:id="@+id/Tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Novedades 5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+        >
+
+        <ImageButton
+            android:id="@+id/iB2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/party" />
+
+        <TextView
+            android:id="@+id/Tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Novedades 2" />
+
+        <ImageButton
+            android:id="@+id/iB4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/party" />
+
+        <TextView
+            android:id="@+id/Tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Novedades 4" />
+
+        <ImageButton
+            android:id="@+id/iB6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/party" />
+
+        <TextView
+            android:id="@+id/Tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Novedades 6" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
