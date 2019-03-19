@@ -10,7 +10,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.time.Year;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class CalendarFinal extends AppCompatActivity implements View.OnClickListener {
 
@@ -47,29 +50,27 @@ public class CalendarFinal extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         if (v == btncalendario) {
-            final Calendar c = Calendar.getInstance();
-            day = c.get(Calendar.DAY_OF_MONTH);
-            month = c.get(Calendar.MONTH);
-            year = c.get(Calendar.YEAR);
 
             final DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    //datePickerDialog=null;
+                public void onDateSet(DatePicker view, int year,
+                                      int monthOfYear, int dayOfMonth) {
+                    final Calendar myCalendar = Calendar.getInstance();
 
-                    int mesActual = monthOfYear;
-                    String diaFormateado = (dayOfMonth < 10)? "0" + String.valueOf(dayOfMonth):String.valueOf(dayOfMonth);
-                    String mesFormateado = (mesActual < 10)? "0" + String.valueOf(mesActual):String.valueOf(mesActual);
+                    myCalendar.set(Calendar.YEAR, year);
+                    myCalendar.set(Calendar.MONTH, monthOfYear);
+                    myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                    String myFormat = "yyyy-MM-dd"; //In which you need put here
+                    SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-                    fechafinal.setText(diaFormateado + "/" + mesFormateado +"/"+ year);
+                    //   expiry.setText(sdf.format(myCalendar.getTime()));
+
                 }
+            }, Calendar.YEAR, Calendar.MONTH, Calendar.DAY_OF_MONTH);
 
-            }
-                    ,day, month, year);
+            datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
             datePickerDialog.show();
 
         }
     }
-
-
 }

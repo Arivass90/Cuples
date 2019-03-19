@@ -2,7 +2,6 @@ package com.example.alexr.couples;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +36,7 @@ public class Adapter extends RecyclerView.Adapter implements View.OnClickListene
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
 
-        Item item =Listitems.get(i);
+        Item item = Listitems.get(i);
         Holder Holder =(Holder) viewHolder;
         Holder.IvFoto.setImageResource(item.getFoto());
         Holder.Tvtitulo.setText(item.getTitulo());
