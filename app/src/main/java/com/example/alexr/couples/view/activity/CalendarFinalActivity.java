@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
@@ -10,12 +10,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import com.example.alexr.couples.R;
+
 import java.text.SimpleDateFormat;
-import java.time.Year;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class CalendarFinal extends AppCompatActivity implements View.OnClickListener {
+public class CalendarFinalActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button volver;
     at.markushi.ui.CircleButton btncalendario;
@@ -31,13 +32,13 @@ public class CalendarFinal extends AppCompatActivity implements View.OnClickList
 
         fechafinal = findViewById(R.id.fechafinal);
         btncalendario = (at.markushi.ui.CircleButton) findViewById(R.id.id_fecha);
-        btncalendario.setOnClickListener(CalendarFinal.this);
+        btncalendario.setOnClickListener(CalendarFinalActivity.this);
         volver = (Button) findViewById(R.id.volver);
 
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(CalendarFinal.this, MenuActivity.class);
+                Intent intent2 = new Intent(CalendarFinalActivity.this, MenuActivity.class);
                 startActivity(intent2);
             }
         });

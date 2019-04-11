@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.alexr.couples.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -28,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(RegisterActivity.this,FirstActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent); }
         }
         );

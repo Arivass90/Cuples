@@ -1,35 +1,26 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.model;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+public class Evento {
 
-public class Item_grid {
-
-
-    private int Foto;
+    private int foto;
     private  String titulo;
     private  String descripcion;
 
-    public Item_grid (int foto,String titulo,String descripcion){
-        Foto = foto;
+    public Evento(int foto, String titulo, String descripcion){
+        this.foto = foto;
         this.titulo= titulo;
         this.descripcion=descripcion;
-
     }
 
     public int getFoto(){
-
-        return Foto;
+        return foto;
     }
 
     public String getTitulo(){
-
         return titulo;
     }
 
     public String getDescripcion(){
-
-
         return descripcion;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.model.FotoEvento;
+import com.example.alexr.couples.view.fragment.GaleriaFragment;
+import com.example.alexr.couples.view.adapter.Adapter;
 
 import java.util.ArrayList;
 
-public class ReciclerView extends AppCompatActivity {
+public class ReciclerViewActivity extends AppCompatActivity {
 
     FloatingActionButton btonFloat;
     private RecyclerView reciclerview;
@@ -40,16 +44,16 @@ public class ReciclerView extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                 toast.show();
-                Intent intent = new Intent(ReciclerView.this, GaleriaFragment.class);
+                Intent intent = new Intent(ReciclerViewActivity.this, GaleriaFragment.class);
                 startActivity(intent);
             }
         });
     }
 
-    private ArrayList<Item> GetListItems(){
+    private ArrayList<FotoEvento> GetListItems(){
 
-        ArrayList<Item> ListItems = new ArrayList<>();
-        return ListItems;
+        ArrayList<FotoEvento> listFotoEventos = new ArrayList<>();
+        return listFotoEventos;
     }
 
 

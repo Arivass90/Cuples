@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.alexr.couples.R;
 
 
 public class CarnevipFragment extends Fragment {

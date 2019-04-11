@@ -1,10 +1,8 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,6 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.fragment.CalendarFragment;
+import com.example.alexr.couples.view.fragment.CarnevipFragment;
+import com.example.alexr.couples.view.fragment.ContactoFragment;
+import com.example.alexr.couples.view.fragment.GaleriaFragment;
+import com.example.alexr.couples.view.fragment.InicioFragment;
+import com.example.alexr.couples.view.fragment.TestFragment;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -106,7 +111,7 @@ public class MenuActivity extends AppCompatActivity
         }
     }
     private void goLogInScreen() {
-        Intent i = new Intent ( this, FirstActivity.class);
+        Intent i = new Intent ( this, LoginActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
 
@@ -178,7 +183,7 @@ public class MenuActivity extends AppCompatActivity
                     .signOut(MenuActivity.this)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         public void onComplete(@NonNull Task<Void> task) {
-                            startActivity(new Intent(MenuActivity.this, FirstActivity.class));
+                            startActivity(new Intent(MenuActivity.this, LoginActivity.class));
                             finish();
                         }
                     });

@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,14 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.model.Evento;
+
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter {
+public class EventsAdapter extends RecyclerView.Adapter {
 
     private Context context;
-    private ArrayList<Item_grid> ListItems;
+    private ArrayList<Evento> ListItems;
 
-    public RecyclerViewAdapter(Context context, ArrayList<Item_grid> listItems) {
+    public EventsAdapter(Context context, ArrayList<Evento> listItems) {
         this.context = context;
         ListItems = listItems;
     }
@@ -32,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
 
-        Item_grid item = ListItems.get(position);
+       Evento item = ListItems.get(position);
         Holder Holder =(Holder) viewHolder;
         Holder.ivFoto.setImageResource(item.getFoto());
         Holder.tvTitulo.setText(item.getTitulo());

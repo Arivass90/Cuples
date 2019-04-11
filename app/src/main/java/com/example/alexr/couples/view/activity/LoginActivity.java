@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,13 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
+import com.example.alexr.couples.R;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import java.util.Arrays;
 
-public class FirstActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     ImageView img;
     private static final int RC_SIGN_IN = 123;
@@ -41,11 +42,11 @@ public class FirstActivity extends AppCompatActivity {
         findViewById(R.id.BtnLogin).setOnClickListener( new View.OnClickListener() {
          @Override
          public void onClick(View w) {
-          Toast toast = Toast.makeText(FirstActivity.this, "Login realizado con exito.\n" +
+          Toast toast = Toast.makeText(LoginActivity.this, "Login realizado con exito.\n" +
           "Bienvenido a Cuples!", Toast.LENGTH_LONG);
           toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
           toast.show();
-          Intent intent = new Intent(FirstActivity.this, MenuActivity.class);
+          Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
           startActivity(intent);
         }
         }
@@ -56,7 +57,7 @@ public class FirstActivity extends AppCompatActivity {
 
          @Override
          public void onClick(View w) {
-         Intent intent = new Intent(FirstActivity.this, RegisterActivity.class);
+         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
          startActivity(intent); }
          }
          );

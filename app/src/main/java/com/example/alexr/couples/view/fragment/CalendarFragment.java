@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.activity.CalendarFinalActivity;
 
 
 public class CalendarFragment extends Fragment {
@@ -52,7 +54,7 @@ public class CalendarFragment extends Fragment {
 
     private void sendData() {
         Intent i = new Intent(getActivity().getBaseContext(),
-                CalendarFinal.class);
+                CalendarFinalActivity.class);
 
         getActivity().startActivity(i);
     }

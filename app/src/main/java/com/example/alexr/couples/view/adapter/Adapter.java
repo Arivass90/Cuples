@@ -1,4 +1,4 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,18 +9,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.model.FotoEvento;
+
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter implements View.OnClickListener {
 
     private Context context;
-    private ArrayList<Item> Listitems;
+    private ArrayList<FotoEvento> listitems;
     private View.OnClickListener Listener;
 
-    public Adapter(Context context, ArrayList<Item> Listitems){
+    public Adapter(Context context, ArrayList<FotoEvento> listitems){
 
         this.context=context;
-        this.Listitems=Listitems;
+        this.listitems = listitems;
     }
 
     @NonNull
@@ -36,16 +39,16 @@ public class Adapter extends RecyclerView.Adapter implements View.OnClickListene
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
 
-        Item item = Listitems.get(i);
+        FotoEvento fotoEvento = listitems.get(i);
         Holder Holder =(Holder) viewHolder;
-        Holder.IvFoto.setImageResource(item.getFoto());
-        Holder.Tvtitulo.setText(item.getTitulo());
+        Holder.IvFoto.setImageResource(fotoEvento.getFoto());
+        Holder.Tvtitulo.setText(fotoEvento.getTitulo());
         System.out.println("On view viewHolder"+ i);
     }
 
     @Override
     public int getItemCount() {
-        return Listitems.size();
+        return listitems.size();
     }
 
     public void setOnClickListener(View.OnClickListener listener){
@@ -71,5 +74,7 @@ public class Adapter extends RecyclerView.Adapter implements View.OnClickListene
             Tvtitulo = itemView.findViewById(R.id.titulo_cardview);
         }
     }
+
+
 }
 

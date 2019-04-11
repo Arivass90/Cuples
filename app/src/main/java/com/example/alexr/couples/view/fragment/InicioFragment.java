@@ -1,18 +1,16 @@
-package com.example.alexr.couples;
+package com.example.alexr.couples.view.fragment;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
+
+import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.activity.GaleriaMainActivity;
 
 public class InicioFragment extends Fragment {
 
@@ -78,6 +76,32 @@ public class InicioFragment extends Fragment {
                 sendData();
             }
         });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
+
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
 
 
         return rootView;
@@ -87,7 +111,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                GaleriaMain.class);
+                GaleriaMainActivity.class);
 
         getActivity().startActivity(i);
     }
@@ -95,7 +119,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                GaleriaMain.class);
+                GaleriaMainActivity.class);
 
         getActivity().startActivity(i);
     }
