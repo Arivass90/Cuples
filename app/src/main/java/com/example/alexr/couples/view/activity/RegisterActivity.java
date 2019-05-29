@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.model.CarneVipUser;
 import com.example.alexr.couples.view.fragment.CarnevipFragment;
@@ -43,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
     String mediaType;
 
     @Override
-        protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mReference = FirebaseDatabase.getInstance().getReference();
@@ -102,21 +103,23 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
             }
         });
 
-        /* public void onActivityResult(int requestCode, int resultCode, Intent data){
-            super.onActivityResult(requestCode, resultCode, data);
 
-
-           if (data != null) {
-                if (requestCode == RC_IMAGE_PICK) {
-                    mediaUri = data.getData();
-                    mediaType = "image";
-                    GlideApp.with(this).load(mediaUri);
-                } else {
-                }
-
-
-        }}*/
     }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+        if (data != null) {
+            if (requestCode == RC_IMAGE_PICK) {
+                mediaUri = data.getData();
+                mediaType = "image";
+                Glide.with(this).load(mediaUri);
+            } else {
+            }
+
+
+        }}
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {

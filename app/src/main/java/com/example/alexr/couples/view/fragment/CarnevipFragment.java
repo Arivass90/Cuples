@@ -55,16 +55,14 @@ public class CarnevipFragment extends Fragment {
 
 
         mReference = FirebaseDatabase.getInstance().getReference().child("datacarne");
-           mReference.addValueEventListener(new ValueEventListener() {
+        mReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-
                 CarneVipUser carneVipUser = dataSnapshot.getValue(CarneVipUser.class);
 
-                nombreUser.setText("nombre" + carneVipUser.nombre);
-                edadUser.setText("edad"+ carneVipUser.edad);
-                sexoUser.setText("sexo" + carneVipUser.sexo);
+                nombreUser.setText("nombre :" + carneVipUser.nombre);
+                edadUser.setText("edad :"+ carneVipUser.edad);
+                sexoUser.setText("sexo :" + carneVipUser.sexo);
 
 
                 //nombreUser.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
@@ -122,7 +120,7 @@ public class CarnevipFragment extends Fragment {
             }
         }*/
 
-        return inflater.inflate(R.layout.fragment_carnevip, container, false);
+        return rootView;
 
 
     }
