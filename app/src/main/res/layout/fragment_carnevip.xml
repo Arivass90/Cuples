@@ -12,8 +12,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
     <TextView
         android:id="@+id/titleVip"
         android:layout_width="match_parent"
@@ -29,50 +31,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="171dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/mosaicocarne"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleVip"
-        app:layout_constraintVertical_bias="0.033">
+        app:layout_constraintVertical_bias="0.371">
 
         <LinearLayout
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="202dp"
+            android:layout_height="131dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorfondo"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nombrecarne"
+                android:id="@+id/nombreUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alex Rivas Sánchez"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/edadcarne"
-                android:layout_width="35dp"
+                android:id="@+id/edadUser"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="28"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/sexocarne"
-                android:layout_width="83dp"
+                android:id="@+id/sexoUser"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hombre"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -85,14 +81,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="125dp"
+            android:layout_width="151dp"
             android:layout_height="131dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorfondo"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="96dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/fotocarne" />

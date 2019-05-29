@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.alexr.couples.R;
-import com.example.alexr.couples.view.activity.GaleriaMainActivity;
+import com.example.alexr.couples.view.activity.ListaEventosActivity;
 
 public class InicioFragment extends Fragment {
 
@@ -111,7 +111,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                GaleriaMainActivity.class);
+                ListaEventosActivity.class);
 
         getActivity().startActivity(i);
     }
@@ -119,7 +119,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                GaleriaMainActivity.class);
+                ListaEventosActivity.class);
 
         getActivity().startActivity(i);
     }
