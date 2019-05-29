@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
@@ -42,6 +43,7 @@ public class MenuActivity extends AppCompatActivity
     FirebaseAuth firebaseAuth;
     FirebaseAuth.AuthStateListener firebaseAuthListener;
     GoogleApiClient googleApiClient;
+    String nombre ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,13 @@ public class MenuActivity extends AppCompatActivity
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
+
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null){
+            nombre = bundle.getString("nombre");
+        }
+
 
         View header = navigationView.getHeaderView(0);
         tvUsername =  header.findViewById(R.id.username);
@@ -96,6 +105,7 @@ public class MenuActivity extends AppCompatActivity
             }
         };
     }
+
         if (googleApiClient == null) {
             googleApiClient = new GoogleApiClient.Builder(this)
                     .enableAutoManage(this, this)
@@ -103,6 +113,7 @@ public class MenuActivity extends AppCompatActivity
                     .build();
         }
     }
+
 
     private void setUserData(FirebaseUser user) {
         if (user != null) {
@@ -146,6 +157,11 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+           Toast.makeText(MenuActivity.this,"funciona",Toast.LENGTH_LONG).show();
+          Intent intent = new Intent(MenuActivity.this, RegisterActivity.class);
+            startActivity(intent);
+            //FragmentManager.beginTransaction().replace(R.id.contenedor,new PerfilFragment()).commit();
+
             return true;
         }
 

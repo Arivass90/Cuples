@@ -63,6 +63,7 @@ public class CalendarFinalActivity extends AppCompatActivity implements View.OnC
                     myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                     String myFormat = "yyyy-MM-dd"; //In which you need put here
                     SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+                    fechafinal.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
 
                     //   expiry.setText(sdf.format(myCalendar.getTime()));
 
@@ -71,6 +72,7 @@ public class CalendarFinalActivity extends AppCompatActivity implements View.OnC
 
             datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
             datePickerDialog.show();
+
 
         }
     }
