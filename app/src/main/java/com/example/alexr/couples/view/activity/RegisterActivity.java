@@ -124,10 +124,10 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-         /* if(rdMujer.isChecked()){
+         /* if(rdNo.isChecked()){
           respuestaRd.setText(respuestaRadioMujer);
 
-        }else if (rdHombre.isChecked()){
+        }else if (rdSi.isChecked()){
           respuestaRd.setText(respuestaRadioHombre);
         }
         else{

@@ -30,7 +30,7 @@ public class FotosEventosActivity extends AppCompatActivity {
     private RecyclerView recyclerview;
     private FakeFotosEventosAdapter adapter;
     DatabaseReference myRef;
-    StaggeredGridLayoutManager staggeredGridLayoutManager;
+
 
 
     @Override
@@ -49,6 +49,8 @@ public class FotosEventosActivity extends AppCompatActivity {
         RecyclerView recycler = findViewById(R.id.recyclerFotosEventos);
         recycler.setLayoutManager(new GridLayoutManager(FotosEventosActivity.this, 2));
         recycler.setAdapter(new FotosEventosAdapter(options));
+
+
     }
 
 

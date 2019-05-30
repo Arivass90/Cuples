@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.activity.EventosActivity;
 import com.example.alexr.couples.view.activity.ListaEventosActivity;
 
 public class InicioFragment extends Fragment {
@@ -73,7 +74,7 @@ public class InicioFragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +87,7 @@ public class InicioFragment extends Fragment {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +100,7 @@ public class InicioFragment extends Fragment {
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
 
@@ -111,7 +112,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                ListaEventosActivity.class);
+                EventosActivity.class);
 
         getActivity().startActivity(i);
     }
