@@ -14,87 +14,100 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/id_calendario"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Calendario de eventos"
         android:textColor="@color/colorText"
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="161dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/arrow_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgcalendariocorazon" />
+
+
+    <TextView
+        android:id="@+id/titlecalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Calendario de Eventos"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Calendariofondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.061" />
 
-    <RelativeLayout
-        android:layout_width="350dp"
-        android:layout_height="410dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorfondo"
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/textocalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="183dp"
+        android:layout_alignTop="@+id/titletest"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=" Para poder acceder al calendario por favor pulsa el boton superior "
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgcalendariocorazon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/titlecalendario"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/titlecalendario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="Calendario de Eventos"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/imgcalendariocorazon"
+        android:layout_width="134dp"
+        android:layout_height="77dp"
+        android:layout_alignTop="@+id/textocalendario"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="312dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="@+id/Calendariofondo"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="@+id/Calendariofondo"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textocalendario"
-            android:layout_width="wrap_content"
-            android:layout_height="301dp"
-            android:layout_alignTop="@+id/titletest"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="60dp"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Enero:
-Día 31: Para despedir el año en esta noche tan especial decoraremos el local con toques navideños, colores rojos, dorados y plateados para crear un ambiente mágico. Propondremos a los clientes escribir una nota con todos los deseos para este año nuevo, les ofreceremos cotillón y una copa de cava para brindar por el nuevo año.
-Febrero:
-Día 14: El día más esperado de los enamorados, San Valentín se celebra de una manera especial en nuestro local, el cual estará decorado para la ocasión con globos en forma de corazón, la música será especialmente romántica y realizaremos juegos especiales para las parejas.
-Junio:
-Día 24: Para la noche mágica de San Juan, ofreceremos cócteles especiales y a mitad de precio, realizaremos chupitos con fuego para crear un ambiente especial y muy característico de esta noche.
-Día 28: Para demostrar la igualdad no hay mejor día para celebrar que el del orgullo gay, será un  día especial para dar rienda suelta a la imaginación, para ello animaremos a los clientes premiando mediante concurso los estilismos más originales.
-Diciembre:
-Día 24: Mientras esperamos los regalos de Papá Noel, pasaremos una noche de amor y paz con cotillón para todos los clientes y algunos accesorios navideños.
-"
-            android:textSize="10dp" />
 
-        <ImageView
-            android:id="@+id/imgcalendariocorazon"
-            android:layout_width="176dp"
-            android:layout_height="77dp"
-            android:layout_alignTop="@+id/textocalendario"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="278dp"
-            android:background="@null" />
-    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
