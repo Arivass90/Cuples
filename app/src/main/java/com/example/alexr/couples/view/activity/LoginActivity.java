@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
                     .load(R.drawable.logocuples_png)
                     .into(img);
         }
-
         findViewById(R.id.BtnLogin).setOnClickListener( new View.OnClickListener() {
          @Override
          public void onClick(View w) {
