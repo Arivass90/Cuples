@@ -7,17 +7,17 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
-
-
-        <activity android:name=".view.activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.activity.TestActivity"></activity>
+        <activity
+            android:name=".view.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -50,11 +50,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.activity.ReciclerViewActivity" />
-
         <activity android:name=".view.activity.CalendarFinalActivity" />
         <activity android:name=".view.activity.ListaEventosActivity" />
         <activity android:name=".view.activity.FotosEventosActivity" />
-
     </application>
 
 </manifest>
