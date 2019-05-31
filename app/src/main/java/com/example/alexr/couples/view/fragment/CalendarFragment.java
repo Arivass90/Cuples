@@ -31,13 +31,13 @@ public class CalendarFragment extends Fragment {
 
         img= rootView.findViewById(R.id.Calendariofondo);
         Glide.with(this)
-        .load(R.drawable.wallpaper)
-        .into(img);
+                .load(R.drawable.wallpaper)
+                .into(img);
 
         img1= rootView.findViewById(R.id.imgcalendariocorazon);
         Glide.with(this)
-        .load(R.drawable.imgcalendariocorazon)
-        .into(img1);
+                .load(R.drawable.imgcalendariocorazon)
+                .into(img1);
 
         BtnCalendar = rootView.findViewById(R.id.id_calendario);
 

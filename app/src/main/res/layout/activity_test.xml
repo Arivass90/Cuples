@@ -1,23 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.TestActivity">
+    tools:context=".view.activity.TestActivity"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test de compatibilidad"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/wallpaper">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/preg1"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res1"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg2"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res2"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg3"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res3"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg4"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res4"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg5"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res5"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg6"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res6"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg7"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res7"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg8"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res8"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg9"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res9"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:id="@+id/preg10"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que superpoder tendrias?"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/res10"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"/>
 
 
-
+            <Button
+                android:id="@+id/BtnTestfinal"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="76dp"
+                android:text="@string/registrarse"
+                android:textColor="@color/colorText"
+                app:backgroundTint="@color/colorAccent"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
     </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
