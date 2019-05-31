@@ -184,14 +184,14 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.calendario) {
             FragmentManager.beginTransaction().replace(R.id.contenedor,new CalendarFragment()).commit();
 
-        } else if (id == R.id.galeria) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new GaleriaFragment()).commit();
-
         } else if (id == R.id.testcompatibilidad) {
             FragmentManager.beginTransaction().replace(R.id.contenedor,new TestFragment()).commit();
 
         } else if (id == R.id.contacto) {
             FragmentManager.beginTransaction().replace(R.id.contenedor,new ContactoFragment()).commit();
+
+        } else if (id == R.id.ayuda) {
+            FragmentManager.beginTransaction().replace(R.id.contenedor,new GaleriaFragment()).commit();
 
         } else if (id == R.id.sign_out) {
 

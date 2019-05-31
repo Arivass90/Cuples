@@ -16,10 +16,7 @@
             android:id="@+id/calendario"
             android:icon="@drawable/imgcalendario"
             android:title="@string/calendario" />
-        <item
-            android:id="@+id/galeria"
-            android:icon="@drawable/imgalbum"
-            android:title="@string/galeria" />
+
         <item
             android:id="@+id/testcompatibilidad"
             android:icon="@drawable/imgtest"
@@ -29,6 +26,12 @@
             android:id="@+id/contacto"
             android:icon="@drawable/imgcontacto"
             android:title="@string/contacto" />
+
+        <item
+            android:id="@+id/ayuda"
+            android:icon="@drawable/imgalbum"
+            android:title="@string/ayuda" />
+
         <item
             android:id="@+id/sign_out"
             android:icon="@drawable/imgsalir"
