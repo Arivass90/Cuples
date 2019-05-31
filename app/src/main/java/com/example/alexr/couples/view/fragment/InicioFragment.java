@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.view.activity.EventosActivity;
 import com.example.alexr.couples.view.activity.ListaEventosActivity;
@@ -22,12 +23,19 @@ public class InicioFragment extends Fragment {
 
     }
 
+    ImageView img;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_inicio, container, false);
 
+        {
+            img = rootView.findViewById(R.id.Logo);
+            Glide.with(this)
+                    .load(R.drawable.logocuples_png)
+                    .into(img);
+        }
 
         btn1= rootView.findViewById(R.id.iB1);
         btn2= rootView.findViewById(R.id.iB2);
@@ -35,34 +43,6 @@ public class InicioFragment extends Fragment {
         btn4= rootView.findViewById(R.id.iB4);
         btn5= rootView.findViewById(R.id.iB5);
         btn6=rootView.findViewById(R.id.iB6);
-       // img1= rootView.findViewById(R.id.iB1);
-        //Glide.with(this)
-          //    .load(R.drawable.party)
-            //   .into(img1);
-
-        //img2= rootView.findViewById(R.id.iB2);
-        //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img2);
-
-       // img3= rootView.findViewById(R.id.iB3);
-        //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img3);
-
-        //img4= rootView.findViewById(R.id.iB4);
-        //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img4);
-
-        //img5= rootView.findViewById(R.id.iB5);
-        //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img5);
-        //img6= rootView.findViewById(R.id.iB6);
-        //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img6);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +50,6 @@ public class InicioFragment extends Fragment {
                 sendData();
             }
         });
-
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +62,6 @@ public class InicioFragment extends Fragment {
                 sendData();
             }
         });
-
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,14 +74,12 @@ public class InicioFragment extends Fragment {
                 sendData();
             }
         });
-
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendData2();
             }
         });
-
 
         return rootView;
     }

@@ -23,6 +23,14 @@
     <string name="galeria">Galeria</string>
     <string name="test_de_compatibilidad">Test de Compatibilidad</string>
     <string name="salir">Desconectar</string>
+    <string name="contact_form">Contacto</string>
+    <string name="contact_form_name">Nombre</string>
+    <string name="contact_form_email">Email</string>
+    <string name="contact_form_subject">Asunto</string>
+    <string name="contact_form_message">Mensaje</string>
+    <string name="contact_form_button">Enviar Mensaje</string>
+    <string name="contact_form_post_message">El mensaje se esta enviando, espere...</string>
+    <string name="contact_posted">Mensaje enviado correctamente, nuestro equipo se pondra en contacto con usted en menos de 24 h.</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

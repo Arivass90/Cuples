@@ -47,7 +47,7 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
 
 
                 startActivity(intent);
-                 ;
+                ;
             }
         });
         radioGroupE.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -76,9 +76,6 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
             }
         });
 
-
-
-
     }
 
 
@@ -96,23 +93,5 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
             toast1.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
             toast1.show();
         }*/
-
-
     }
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
+}
