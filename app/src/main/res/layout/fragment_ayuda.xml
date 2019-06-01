@@ -31,7 +31,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:padding="20dp"
         android:text="- Bienvenido a cuple`s , a continuacion te vamos a explicar los puntos mas importantes de la aplicacion para su correcto funcionamiento"
         android:textColor="@color/colorPrimaryDark"
@@ -44,7 +44,6 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:padding="20dp"
         android:text="- Lo primero que deberias hacer es rellenar tu perfil, en el margen superior derecho verás un icono blanco don podras cargar tu foto , tu nombre, edad y sexo, esto nos ayudará a identificarte cada vez que accedas a la palicación"
         android:textColor="@color/colorPrimaryDark"
@@ -57,7 +56,6 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:padding="20dp"
         android:text="-En la pantalla principal , justo donde has encontrado este boton, verás mas opciones,una de ellas esl el calendario, puedes entrar y consultar los proximos eventos disponibles  "
         android:textColor="@color/colorPrimaryDark"
@@ -67,9 +65,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:padding="20dp"
         android:text="- Tambien veras un apartado donde pone Test de Compatibilidad, este apartado es muy importante, ya que necesitamos que lo completes para poder encontrar una cita compatible contigo.  "
         android:textColor="@color/colorPrimaryDark"
@@ -78,8 +76,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-
-
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="161dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gif_thanks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.276" />
 
 
 </android.support.constraint.ConstraintLayout>

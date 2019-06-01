@@ -44,14 +44,14 @@ public class ListaEventosActivity extends AppCompatActivity {
 
         ArrayList<Evento> listItems = new ArrayList<>();
 
-        listItems.add(new Evento("1", R.drawable.party, "Fiesta Viernes 15", "Fiesta donde acudieron 44 personas con una tematica ochentera"));
-        listItems.add(new Evento("2", R.drawable.party, "Fiesta Sabado 16", "Fiesta donde acudieron 56 personas con una tematica ochentera"));
-        listItems.add(new Evento("3", R.drawable.party, "Fiesta Jueves 4", "Fiesta donde acudieron 38 personas con una tematica ochentera"));
-        listItems.add(new Evento("4", R.drawable.party, "Fiesta Martes 12", "Fiesta donde acudieron 42 personas con una tematica ochentera"));
-        listItems.add(new Evento("5", R.drawable.party, "Fiesta viernes 7", "Fiesta donde acudieron 42 personas con una tematica ochentera"));
-        listItems.add(new Evento("6", R.drawable.party, "Fiesta Domingo 21", "Fiesta donde acudieron 32 personas con una tematica ochentera"));
-        listItems.add(new Evento("7", R.drawable.party, "Fiesta Lunes 8", "Fiesta donde acudieron 45 personas con una tematica ochentera"));
-
+        listItems.add(new Evento("1", R.drawable.halowen, "Fiesta Viernes 15", "Fiesta donde acudieron 44 personas con una tematica ochentera"));
+        listItems.add(new Evento("2", R.drawable.disfraz_amigas_grupo_de_rock, "Fiesta Sabado 16", "Fiesta donde acudieron 56 personas con una tematica disco"));
+        listItems.add(new Evento("3", R.drawable.disfraces_verano, "Fiesta Jueves 4", "Fiesta donde acudieron 38 personas con una tematica italiana"));
+        listItems.add(new Evento("4", R.drawable.fiesta_ibiza, "Fiesta Martes 12", "Fiesta donde acudieron 42 personas con una tematica ibizenca"));
+        listItems.add(new Evento("5", R.drawable.fin_deano, "Fiesta viernes 7", "Fiesta donde acudieron 42 personas con una tematica disco"));
+        listItems.add(new Evento("6", R.drawable.fotos_gal, "Fiesta Domingo 21", "Fiesta donde acudieron 32 personas con una tematica mexicana"));
+        listItems.add(new Evento("7", R.drawable.photocall, "Fiesta Lunes 8", "Fiesta donde acudieron 45 personas con una tematica ochentera"));
+        listItems.add(new Evento("8", R.drawable.solteros, "Fiesta Sabado 15", "Fiesta donde acudieron 64 personas con una tematica ibizenca"));
         return listItems;
     }
 

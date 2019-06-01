@@ -43,17 +43,17 @@
 
         <LinearLayout
             android:layout_width="202dp"
-            android:layout_height="131dp"
+            android:layout_height="142dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:background="@color/colorfondo"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/nombreUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
                 android:id="@+id/edadUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
                 android:id="@+id/sexoUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -82,15 +82,13 @@
 
         <LinearLayout
             android:layout_width="151dp"
-            android:layout_height="131dp"
+            android:layout_height="142dp"
             android:layout_marginTop="20dp"
-            android:background="@color/colorfondo"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="96dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
                 android:src="@drawable/fotocarne" />
 
 

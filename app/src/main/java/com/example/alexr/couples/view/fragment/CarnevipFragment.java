@@ -60,9 +60,9 @@ public class CarnevipFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 CarneVipUser carneVipUser = dataSnapshot.getValue(CarneVipUser.class);
 
-                nombreUser.setText("nombre :" + carneVipUser.nombre);
-                edadUser.setText("edad :"+ carneVipUser.edad);
-                sexoUser.setText("sexo :" + carneVipUser.sexo);
+                nombreUser.setText("Nombre : " + carneVipUser.nombre);
+                edadUser.setText("Edad : "+ carneVipUser.edad);
+                sexoUser.setText("Sexo : " + carneVipUser.sexo);
 
 
                 //nombreUser.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
