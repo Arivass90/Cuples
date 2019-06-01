@@ -157,7 +157,6 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-           Toast.makeText(MenuActivity.this,"funciona",Toast.LENGTH_LONG).show();
           Intent intent = new Intent(MenuActivity.this, RegisterActivity.class);
             startActivity(intent);
             //FragmentManager.beginTransaction().replace(R.id.contenedor,new PerfilFragment()).commit();

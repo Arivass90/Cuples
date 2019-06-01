@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.activity.EventosActivity;
 import com.example.alexr.couples.view.activity.ListaEventosActivity;
 
 public class InicioFragment extends Fragment {
@@ -34,34 +35,34 @@ public class InicioFragment extends Fragment {
         btn4= rootView.findViewById(R.id.iB4);
         btn5= rootView.findViewById(R.id.iB5);
         btn6=rootView.findViewById(R.id.iB6);
-       // img1= rootView.findViewById(R.id.iB1);
+        // img1= rootView.findViewById(R.id.iB1);
         //Glide.with(this)
-          //    .load(R.drawable.party)
-            //   .into(img1);
+        //    .load(R.drawable.party)
+        //   .into(img1);
 
         //img2= rootView.findViewById(R.id.iB2);
         //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img2);
+        //      .load(R.drawable.party)
+        //    .into(img2);
 
-       // img3= rootView.findViewById(R.id.iB3);
+        // img3= rootView.findViewById(R.id.iB3);
         //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img3);
+        //      .load(R.drawable.party)
+        //    .into(img3);
 
         //img4= rootView.findViewById(R.id.iB4);
         //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img4);
+        //      .load(R.drawable.party)
+        //    .into(img4);
 
         //img5= rootView.findViewById(R.id.iB5);
         //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img5);
+        //      .load(R.drawable.party)
+        //    .into(img5);
         //img6= rootView.findViewById(R.id.iB6);
         //Glide.with(this)
-          //      .load(R.drawable.party)
-            //    .into(img6);
+        //      .load(R.drawable.party)
+        //    .into(img6);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +74,7 @@ public class InicioFragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +87,7 @@ public class InicioFragment extends Fragment {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +100,7 @@ public class InicioFragment extends Fragment {
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                sendData2();
             }
         });
 
@@ -111,7 +112,7 @@ public class InicioFragment extends Fragment {
     {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
-                ListaEventosActivity.class);
+                EventosActivity.class);
 
         getActivity().startActivity(i);
     }

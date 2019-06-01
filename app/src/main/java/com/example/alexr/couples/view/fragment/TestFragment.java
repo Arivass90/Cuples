@@ -15,43 +15,47 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
+import com.example.alexr.couples.view.activity.CalendarFinalActivity;
+import com.example.alexr.couples.view.activity.TestActivity;
 
 public class TestFragment extends Fragment {
 
-    ImageView imgcorazon;
+    Button BtnTest;
     ImageView img;
 
-        public TestFragment(){
+    public TestFragment(){
 
-        }
+    }
 
-         @Override
-         public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-             View rootView=inflater.inflate(R.layout.fragment_test, container, false);
-             Button entry = rootView.findViewById(R.id.id_test);
+        View rootView=inflater.inflate(R.layout.fragment_test, container, false);
+        Button entry = rootView.findViewById(R.id.id_test);
 
-             img= rootView.findViewById(R.id.Testfondo);
-             Glide.with(this)
-                     .load(R.drawable.wallpaper)
-                     .into(img);
+        img= rootView.findViewById(R.id.Testfondo);
+        Glide.with(this)
+                .load(R.drawable.wallpaper)
+                .into(img);
 
-             imgcorazon= rootView.findViewById(R.id.imgcorazonflecha);
-             Glide.with(this)
-                     .load(R.drawable.imgcorazonflecha)
-                     .into(imgcorazon);
 
-             entry.setOnClickListener(new View.OnClickListener() {
+        BtnTest = rootView.findViewById(R.id.id_test);
 
-                 @Override
-                 public void onClick(View v) {
-                     Uri uri = Uri.parse("https://docs.google.com/forms/d/1q-aecOmSGrJi35BUssta7sBnHWK32sRWFLM2hm-bmCc/viewform?edit_requested=true");
-                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                     startActivity(intent);
-                 }
+        BtnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
 
-             });
+
         return rootView;
 
     }
-}
+
+    private void sendData() {
+        Intent i = new Intent(getActivity().getBaseContext(),
+                TestActivity.class);
+
+        getActivity().startActivity(i);
+    }}

@@ -24,7 +24,14 @@
     <string name="galeria">Galeria</string>
     <string name="test_de_compatibilidad">Test de Compatibilidad</string>
     <string name="salir">Desconectar</string>
-
+    <string name="contact_form">Contact Us</string>
+    <string name="contact_form_name">Nombre</string>
+    <string name="contact_form_email">Email</string>
+    <string name="contact_form_subject">Asunto</string>
+    <string name="contact_form_message">Mensaje</string>
+    <string name="contact_form_button">Enviar Mensaje</string>
+    <string name="contact_form_post_message">Por favor espere, su mensaje se esta enviando.</string>
+    <string name="contact_posted">Su mensaje se envió correctamente, el equipo de Cuples se pondra en contacto con usted en menos 24 horas.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
