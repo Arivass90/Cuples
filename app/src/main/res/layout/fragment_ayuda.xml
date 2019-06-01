@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.AyudaFragment"
+    android:background="@drawable/wallpaper">
+
+
+    <TextView
+        android:id="@+id/titleayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Guia de Usuario"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"
+        android:text="- Bienvenido a cuple`s , a continuacion te vamos a explicar los puntos mas importantes de la aplicacion para su correcto funcionamiento"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleayuda" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="20dp"
+        android:text="- Lo primero que deberias hacer es rellenar tu perfil, en el margen superior derecho verás un icono blanco don podras cargar tu foto , tu nombre, edad y sexo, esto nos ayudará a identificarte cada vez que accedas a la palicación"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="20dp"
+        android:text="-En la pantalla principal , justo donde has encontrado este boton, verás mas opciones,una de ellas esl el calendario, puedes entrar y consultar los proximos eventos disponibles  "
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="20dp"
+        android:text="- Tambien veras un apartado donde pone Test de Compatibilidad, este apartado es muy importante, ya que necesitamos que lo completes para poder encontrar una cita compatible contigo.  "
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

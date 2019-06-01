@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.model.FotoEvento;
-import com.example.alexr.couples.view.fragment.GaleriaFragment;
+import com.example.alexr.couples.view.fragment.AyudaFragment;
 import com.example.alexr.couples.view.adapter.Adapter;
 
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class ReciclerViewActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                 toast.show();
-                Intent intent = new Intent(ReciclerViewActivity.this, GaleriaFragment.class);
+                Intent intent = new Intent(ReciclerViewActivity.this, AyudaFragment.class);
                 startActivity(intent);
             }
         });

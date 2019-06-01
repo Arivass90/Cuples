@@ -15,14 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.view.fragment.CalendarFragment;
 import com.example.alexr.couples.view.fragment.CarnevipFragment;
 import com.example.alexr.couples.view.fragment.ContactoFragment;
-import com.example.alexr.couples.view.fragment.GaleriaFragment;
+import com.example.alexr.couples.view.fragment.AyudaFragment;
 import com.example.alexr.couples.view.fragment.InicioFragment;
 import com.example.alexr.couples.view.fragment.TestFragment;
 import com.firebase.ui.auth.AuthUI;
@@ -190,7 +189,7 @@ public class MenuActivity extends AppCompatActivity
             FragmentManager.beginTransaction().replace(R.id.contenedor,new ContactoFragment()).commit();
 
         } else if (id == R.id.ayuda) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new GaleriaFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor,new AyudaFragment()).commit();
 
         } else if (id == R.id.sign_out) {
 
