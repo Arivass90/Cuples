@@ -5,16 +5,16 @@ public class FotoEvento {
     private int foto;
     private String titulo;
 
-    public FotoEvento(int foto, String titulo){
+    public FotoEvento(int foto, String titulo) {
         this.foto = foto;
-        this.titulo= titulo;
+        this.titulo = titulo;
     }
 
-    public int getFoto(){
+    public int getFoto() {
         return foto;
     }
 
-    public String getTitulo(){
+    public String getTitulo() {
         return titulo;
     }
 }

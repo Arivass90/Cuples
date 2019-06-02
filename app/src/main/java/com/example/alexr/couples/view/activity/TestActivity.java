@@ -8,15 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.alexr.couples.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TestActivity extends AppCompatActivity {
     Button aceptarTest;
-    TextView tx1,tx2,tx3,tx4,tx5,tx6,tx7,tx8,tx9,tx10;
+    TextView tx1, tx2, tx3, tx4, tx5, tx6, tx7, tx8, tx9, tx10;
     DatabaseReference mReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,16 +24,16 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
         mReference = FirebaseDatabase.getInstance().getReference();
         final DatabaseReference mensajeRef = mReference.child("testCompatibilidad");
-        tx1=findViewById(R.id.res1);
-        tx2=findViewById(R.id.res2);
-        tx3=findViewById(R.id.res3);
-        tx4=findViewById(R.id.res4);
-        tx5=findViewById(R.id.res5);
-        tx6=findViewById(R.id.res6);
-        tx7=findViewById(R.id.res7);
-        tx8=findViewById(R.id.res8);
-        tx9=findViewById(R.id.res9);
-        tx10=findViewById(R.id.res10);
+        tx1 = findViewById(R.id.res1);
+        tx2 = findViewById(R.id.res2);
+        tx3 = findViewById(R.id.res3);
+        tx4 = findViewById(R.id.res4);
+        tx5 = findViewById(R.id.res5);
+        tx6 = findViewById(R.id.res6);
+        tx7 = findViewById(R.id.res7);
+        tx8 = findViewById(R.id.res8);
+        tx9 = findViewById(R.id.res9);
+        tx10 = findViewById(R.id.res10);
 
 
         findViewById(R.id.BtnTestfinal).setOnClickListener(new View.OnClickListener() {

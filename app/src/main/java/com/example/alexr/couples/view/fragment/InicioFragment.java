@@ -8,17 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.view.activity.EventosActivity;
 import com.example.alexr.couples.view.activity.ListaEventosActivity;
 
 public class InicioFragment extends Fragment {
 
-    ImageView img1,img2,img3,img4,img5,img6;
-    private ImageButton btn1,btn2,btn3,btn4,btn5,btn6 ;
+    ImageView img1, img2, img3, img4, img5, img6;
+    private ImageButton btn1, btn2, btn3, btn4, btn5, btn6;
 
-    public InicioFragment(){
+    public InicioFragment() {
 
     }
 
@@ -29,12 +28,12 @@ public class InicioFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_inicio, container, false);
 
 
-        btn1= rootView.findViewById(R.id.iB1);
-        btn2= rootView.findViewById(R.id.iB2);
-        btn3=rootView.findViewById(R.id.iB3);
-        btn4= rootView.findViewById(R.id.iB4);
-        btn5= rootView.findViewById(R.id.iB5);
-        btn6=rootView.findViewById(R.id.iB6);
+        btn1 = rootView.findViewById(R.id.iB1);
+        btn2 = rootView.findViewById(R.id.iB2);
+        btn3 = rootView.findViewById(R.id.iB3);
+        btn4 = rootView.findViewById(R.id.iB4);
+        btn5 = rootView.findViewById(R.id.iB5);
+        btn6 = rootView.findViewById(R.id.iB6);
         // img1= rootView.findViewById(R.id.iB1);
         //Glide.with(this)
         //    .load(R.drawable.party)
@@ -108,16 +107,15 @@ public class InicioFragment extends Fragment {
         return rootView;
     }
 
-    private void sendData()
-    {
+    private void sendData() {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
                 EventosActivity.class);
 
         getActivity().startActivity(i);
     }
-    private void sendData2()
-    {
+
+    private void sendData2() {
         //INTENT OBJ
         Intent i = new Intent(getActivity().getBaseContext(),
                 ListaEventosActivity.class);

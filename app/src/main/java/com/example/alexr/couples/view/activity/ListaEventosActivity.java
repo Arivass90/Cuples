@@ -12,10 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.model.Evento;
-
 import java.util.ArrayList;
 
 public class ListaEventosActivity extends AppCompatActivity {
@@ -30,17 +28,16 @@ public class ListaEventosActivity extends AppCompatActivity {
 
         recyclerview = findViewById(R.id.recycler);
 
-        recyclerview.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerview.setLayoutManager(new GridLayoutManager(this, 2));
 
         adapter = new EventsAdapter(this, getItemList());
         recyclerview.setAdapter(adapter);
         // Hay que poner un set on click listener para que nos muestre la lista de fotos del dia seleccionado
 
 
-
     }
 
-    private ArrayList<Evento> getItemList(){
+    private ArrayList<Evento> getItemList() {
 
         ArrayList<Evento> listItems = new ArrayList<>();
 
@@ -69,7 +66,7 @@ public class ListaEventosActivity extends AppCompatActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-            View contentView = LayoutInflater.from(context).inflate(R.layout.activity_item_grid,null);
+            View contentView = LayoutInflater.from(context).inflate(R.layout.activity_item_grid, null);
             return new Holder(contentView);
         }
 
@@ -77,7 +74,7 @@ public class ListaEventosActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
 
             final Evento evento = ListItems.get(position);
-            final Holder holder =(Holder) viewHolder;
+            final Holder holder = (Holder) viewHolder;
             holder.ivFoto.setImageResource(evento.getFoto());
             holder.tvTitulo.setText(evento.getTitulo());
             holder.tvDescripcion.setText(evento.getDescripcion());

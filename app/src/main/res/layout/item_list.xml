@@ -7,20 +7,21 @@
     tools:context=".model.FotoEvento">
 
     <ImageView
+        android:id="@+id/foto_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/imgcontacto"
-        android:id="@+id/foto_cardview"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:src="@drawable/imgcontacto" />
+
     <TextView
+        android:id="@+id/titulo_cardview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nombre"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:id="@+id/titulo_cardview"
+        android:text="nombre"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"/>
+        android:textStyle="bold" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
 import com.example.alexr.couples.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -26,11 +25,11 @@ public class SplashActivity extends AppCompatActivity {
         loading.setBackgroundResource(R.drawable.cargando);
         animacion = (AnimationDrawable) loading.getBackground();
         animacion.start();
-        transicion = AnimationUtils.loadAnimation(this,R.anim.mitransicion);
+        transicion = AnimationUtils.loadAnimation(this, R.anim.mitransicion);
         loading.startAnimation(transicion);
         transicion.setAnimationListener(new Animation.AnimationListener() {
 
-            public void siguienteActivity(){
+            public void siguienteActivity() {
                 animacion.stop(); //Paramos el AnimationDrawable
                 Intent intento = new Intent(SplashActivity.this, LoginActivity.class); // Lanzamos SiguienteActivity
                 startActivity(intento);

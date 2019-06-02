@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.view.activity.CalendarFinalActivity;
@@ -29,12 +28,12 @@ public class CalendarFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
 
-        img= rootView.findViewById(R.id.Calendariofondo);
+        img = rootView.findViewById(R.id.Calendariofondo);
         Glide.with(this)
                 .load(R.drawable.wallpaper)
                 .into(img);
 
-        img1= rootView.findViewById(R.id.imgcalendariocorazon);
+        img1 = rootView.findViewById(R.id.imgcalendariocorazon);
         Glide.with(this)
                 .load(R.drawable.imgcalendariocorazon)
                 .into(img1);

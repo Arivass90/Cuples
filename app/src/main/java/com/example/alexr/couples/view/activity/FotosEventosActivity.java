@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -13,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
-import com.example.alexr.couples.model.FotoEvento;
 import com.example.alexr.couples.model.FotosEventosGrid;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -52,7 +49,7 @@ public class FotosEventosActivity extends AppCompatActivity {
     }
 
 
-    class FotosEventosAdapter extends FirebaseRecyclerAdapter<FotosEventosGrid, FotosEventosAdapter.FotoEventoHolder>{
+    class FotosEventosAdapter extends FirebaseRecyclerAdapter<FotosEventosGrid, FotosEventosAdapter.FotoEventoHolder> {
         public FotosEventosAdapter(@NonNull FirebaseRecyclerOptions<FotosEventosGrid> options) {
             super(options);
         }
@@ -66,7 +63,7 @@ public class FotosEventosActivity extends AppCompatActivity {
         @NonNull
         @Override
         public FotoEventoHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-           View contentView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.viewholder_fotoseventos,null);
+            View contentView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.viewholder_fotoseventos, null);
             return new FotosEventosAdapter.FotoEventoHolder(contentView);
 
 
@@ -85,13 +82,7 @@ public class FotosEventosActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-    private ArrayList<FotosEventosGrid> getItemList(){
+    private ArrayList<FotosEventosGrid> getItemList() {
 
         ArrayList<FotosEventosGrid> listItems = new ArrayList<>();
 
@@ -112,7 +103,8 @@ public class FotosEventosActivity extends AppCompatActivity {
 
 
 
-        */return listItems;
+        */
+        return listItems;
     }
 
     class FakeFotosEventosAdapter extends RecyclerView.Adapter {
@@ -130,7 +122,7 @@ public class FotosEventosActivity extends AppCompatActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-            View contentView = LayoutInflater.from(context).inflate(R.layout.viewholder_fotoseventos,null);
+            View contentView = LayoutInflater.from(context).inflate(R.layout.viewholder_fotoseventos, null);
             return new Holder(contentView);
         }
 
@@ -139,8 +131,8 @@ public class FotosEventosActivity extends AppCompatActivity {
 
             FotosEventosGrid foto = ListItemsFotosEventos.get(position);
             Holder Holder2 = (FakeFotosEventosAdapter.Holder) viewHolder;
-           // Holder2.ivFotoEvento.setImageResource(foto.getFotoEvento());
-          //  Holder2.tvTituloEvento.setText(foto.getTituloEvento())
+            // Holder2.ivFotoEvento.setImageResource(foto.getFotoEvento());
+            //  Holder2.tvTituloEvento.setText(foto.getTituloEvento())
             // Holder.tvDescripcion.setText(item.getDescripcion());
         }
 
@@ -151,14 +143,14 @@ public class FotosEventosActivity extends AppCompatActivity {
 
         public class Holder extends RecyclerView.ViewHolder {
             ImageView ivFotoEvento;
-           // TextView tvTituloEvento;
+            // TextView tvTituloEvento;
             // TextView tvDescripcion;
 
             public Holder(@NonNull View itemView) {
                 super(itemView);
 
                 ivFotoEvento = itemView.findViewById(R.id.ivFotoevento);
-               // tvTituloEvento = itemView.findViewById(R.id.tvTituloFotoevento);
+                // tvTituloEvento = itemView.findViewById(R.id.tvTituloFotoevento);
                 // tvDescripcion = itemView.findViewById(R.id.tvDescripcion);
             }
         }

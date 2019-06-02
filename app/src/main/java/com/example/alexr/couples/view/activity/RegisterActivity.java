@@ -2,40 +2,25 @@ package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
-import com.example.alexr.couples.model.CarneVipUser;
-import com.example.alexr.couples.view.fragment.CarnevipFragment;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     RadioButton rdHombre;
     RadioButton rdMujer;
     DatabaseReference mReference;
-    String respuestaRadio ;
+    String respuestaRadio;
     RadioGroup radioGroupG;
     RadioButton radioOptions;
     ImageButton mImageButton;
@@ -73,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
                 mensajeRef.child("sexo").setValue(respuestaRadio);
 
                 startActivity(intent);
-                 ;
+                ;
             }
         });
         radioGroupG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -106,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
 
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
 
@@ -119,7 +104,8 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
             }
 
 
-        }}
+        }
+    }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -140,10 +126,7 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
     }
 
 
-
-
-
-    }
+}
 
 
 

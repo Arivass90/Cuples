@@ -4,14 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-
-/*
-Ua
- */
 public class FotosEventosGrid extends RecyclerView.Adapter {
     public String original;
-
 
     @NonNull
     @Override

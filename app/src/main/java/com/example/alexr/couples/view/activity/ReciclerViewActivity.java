@@ -10,12 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.model.FotoEvento;
 import com.example.alexr.couples.view.fragment.AyudaFragment;
 import com.example.alexr.couples.view.adapter.Adapter;
-
 import java.util.ArrayList;
 
 public class ReciclerViewActivity extends AppCompatActivity {
@@ -23,16 +21,16 @@ public class ReciclerViewActivity extends AppCompatActivity {
     FloatingActionButton btonFloat;
     private RecyclerView reciclerview;
     private Adapter adapter;
-    private  RecyclerView.LayoutManager manager;
+    private RecyclerView.LayoutManager manager;
 
 
-    protected void onCreate (Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recicler_view);
-        reciclerview= findViewById(R.id.id_recycleview);
-        manager= new LinearLayoutManager(this);
-        reciclerview.setLayoutManager(new GridLayoutManager(this,2));
+        reciclerview = findViewById(R.id.id_recycleview);
+        manager = new LinearLayoutManager(this);
+        reciclerview.setLayoutManager(new GridLayoutManager(this, 2));
 
 
         adapter = new Adapter(this, GetListItems());
@@ -50,7 +48,7 @@ public class ReciclerViewActivity extends AppCompatActivity {
         });
     }
 
-    private ArrayList<FotoEvento> GetListItems(){
+    private ArrayList<FotoEvento> GetListItems() {
 
         ArrayList<FotoEvento> listFotoEventos = new ArrayList<>();
         return listFotoEventos;

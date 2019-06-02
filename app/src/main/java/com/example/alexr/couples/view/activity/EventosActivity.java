@@ -1,26 +1,19 @@
 package com.example.alexr.couples.view.activity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class EventosActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     RadioButton rdSi;
     RadioButton rdNo;
-    String respuestaRadio ;
+    String respuestaRadio;
     RadioGroup radioGroupE;
     RadioButton radioOptions;
 
@@ -33,7 +26,6 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
         rdSi = findViewById(R.id.radioSi);
         rdNo = findViewById(R.id.radioNo);
         radioGroupE = findViewById(R.id.radioGroupEventos);
-
 
 
         findViewById(R.id.BtnRegistrofinal).setOnClickListener(new View.OnClickListener() {
@@ -77,8 +69,6 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
         });
 
 
-
-
     }
 
 
@@ -99,9 +89,6 @@ public class EventosActivity extends AppCompatActivity implements RadioGroup.OnC
 
 
     }
-
-
-
 
 
 }

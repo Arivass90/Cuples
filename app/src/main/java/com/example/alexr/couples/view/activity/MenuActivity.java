@@ -15,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.example.alexr.couples.R;
 import com.example.alexr.couples.view.fragment.CalendarFragment;
@@ -35,14 +34,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MenuActivity extends AppCompatActivity
-    implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     TextView tvUsername;
     TextView tvUseremail;
     ImageView ivUserAvatar;
     FirebaseAuth firebaseAuth;
     FirebaseAuth.AuthStateListener firebaseAuthListener;
     GoogleApiClient googleApiClient;
-    String nombre ="";
+    String nombre = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class MenuActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager FragmentManager = getSupportFragmentManager();
-        FragmentManager.beginTransaction().replace(R.id.contenedor,new InicioFragment()).commit();
+        FragmentManager.beginTransaction().replace(R.id.contenedor, new InicioFragment()).commit();
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -71,15 +70,15 @@ public class MenuActivity extends AppCompatActivity
 
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle!=null){
+        if (bundle != null) {
             nombre = bundle.getString("nombre");
         }
 
 
         View header = navigationView.getHeaderView(0);
-        tvUsername =  header.findViewById(R.id.username);
-        ivUserAvatar= header.findViewById(R.id.useravatar);
-        tvUseremail= header.findViewById(R.id.useremail);
+        tvUsername = header.findViewById(R.id.username);
+        ivUserAvatar = header.findViewById(R.id.useravatar);
+        tvUseremail = header.findViewById(R.id.useremail);
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if (firebaseUser != null) {
@@ -94,16 +93,16 @@ public class MenuActivity extends AppCompatActivity
             firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
 
                 @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    setUserData(user);
-                } else {
-                    goLogInScreen();
+                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    if (user != null) {
+                        setUserData(user);
+                    } else {
+                        goLogInScreen();
+                    }
                 }
-            }
-        };
-    }
+            };
+        }
 
         if (googleApiClient == null) {
             googleApiClient = new GoogleApiClient.Builder(this)
@@ -120,12 +119,14 @@ public class MenuActivity extends AppCompatActivity
             Glide.with(this).load(user.getPhotoUrl()).into(ivUserAvatar);
         }
     }
+
     private void goLogInScreen() {
-        Intent i = new Intent ( this, LoginActivity.class);
+        Intent i = new Intent(this, LoginActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
 
     }
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
     }
@@ -156,7 +157,7 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-          Intent intent = new Intent(MenuActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(MenuActivity.this, RegisterActivity.class);
             startActivity(intent);
             //FragmentManager.beginTransaction().replace(R.id.contenedor,new PerfilFragment()).commit();
 
@@ -174,22 +175,22 @@ public class MenuActivity extends AppCompatActivity
 
 
         if (id == R.id.inicio) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new InicioFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new InicioFragment()).commit();
 
         } else if (id == R.id.carnevip) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new CarnevipFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new CarnevipFragment()).commit();
 
         } else if (id == R.id.calendario) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new CalendarFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new CalendarFragment()).commit();
 
         } else if (id == R.id.testcompatibilidad) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new TestFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new TestFragment()).commit();
 
         } else if (id == R.id.contacto) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new ContactoFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new ContactoFragment()).commit();
 
         } else if (id == R.id.ayuda) {
-            FragmentManager.beginTransaction().replace(R.id.contenedor,new AyudaFragment()).commit();
+            FragmentManager.beginTransaction().replace(R.id.contenedor, new AyudaFragment()).commit();
 
         } else if (id == R.id.sign_out) {
 

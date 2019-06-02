@@ -4,8 +4,8 @@ public class Evento {
 
     public String id;
     private int foto;
-    private  String titulo;
-    private  String descripcion;
+    private String titulo;
+    private String descripcion;
 
     public Evento(String id, int foto, String titulo, String descripcion) {
         this.id = id;
@@ -14,15 +14,15 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-    public int getFoto(){
+    public int getFoto() {
         return foto;
     }
 
-    public String getTitulo(){
+    public String getTitulo() {
         return titulo;
     }
 
-    public String getDescripcion(){
+    public String getDescripcion() {
         return descripcion;
     }
 }

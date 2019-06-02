@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.TestActivity"
+    android:background="@drawable/wallpaper"
     android:orientation="vertical"
-    android:background="@drawable/wallpaper">
+    tools:context=".view.activity.TestActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Test de compatibilidad"
         android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textStyle="bold" />
 
 
     <ScrollView
@@ -28,175 +28,175 @@
 
             <TextView
                 android:id="@+id/preg1"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Que superpoder tendrias?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res1"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg2"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Define tu vida con un titulo de pelicula o libro?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res2"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg3"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Que es para ti la libertad?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res3"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg4"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Qué haces cuando nadie te mira?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res4"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg5"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Cuál es la locura más grande que has hecho por amor?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res5"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg6"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Qué salvarías si solo tuvieras treinta segundos?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res6"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg7"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="Si tuvieras que elegir un hobby,¿cuál sería?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res7"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg8"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Qué tipo de relación te interesa?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res8"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg9"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="¿Qué música te gusta escuchar?"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res9"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
             <TextView
                 android:id="@+id/preg10"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="Defínete en tres palabras:"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/res10"
                 android:layout_width="150dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorText"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorText" />
 
 
             <Button
                 android:id="@+id/BtnTestfinal"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
                 android:layout_marginBottom="76dp"
                 android:text="@string/registrarse"
                 android:textColor="@color/colorText"
-                app:backgroundTint="@color/colorAccent"
-                android:layout_margin="20dp"
-                android:layout_gravity="center"/>
+                app:backgroundTint="@color/colorAccent" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

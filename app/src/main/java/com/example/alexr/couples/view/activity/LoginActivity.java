@@ -21,15 +21,15 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 123;
 
     @Override
-        protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
         findViewById(R.id.BtnLoginGoogle).setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-        signIn();
-        }
+            @Override
+            public void onClick(View view) {
+                signIn();
+            }
         });
         comeIn();
         {
@@ -39,32 +39,34 @@ public class LoginActivity extends AppCompatActivity {
                     .into(img);
         }
 
-        findViewById(R.id.BtnLogin).setOnClickListener( new View.OnClickListener() {
-         @Override
-         public void onClick(View w) {
-          Toast toast = Toast.makeText(LoginActivity.this, "Login realizado con exito.\n" +
-          "Bienvenido a Cuples!", Toast.LENGTH_LONG);
-          toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-          toast.show();
-          Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-          startActivity(intent);
-        }
-        }
+        findViewById(R.id.BtnLogin).setOnClickListener(new View.OnClickListener() {
+                                                           @Override
+                                                           public void onClick(View w) {
+                                                               Toast toast = Toast.makeText(LoginActivity.this, "Login realizado con exito.\n" +
+                                                                       "Bienvenido a Cuples!", Toast.LENGTH_LONG);
+                                                               toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+                                                               toast.show();
+                                                               Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                                                               startActivity(intent);
+                                                           }
+                                                       }
         );
 
         findViewById(R.id.BtnRegistro).setOnClickListener(
-        new View.OnClickListener() {
+                new View.OnClickListener() {
 
-         @Override
-         public void onClick(View w) {
-         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-         startActivity(intent); }
-         }
-         );
+                    @Override
+                    public void onClick(View w) {
+                        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );
 
-        comeIn(); }
+        comeIn();
+    }
 
-    void comeIn(){
+    void comeIn() {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if (firebaseUser != null) {
             startActivity(new Intent(this, MenuActivity.class));
@@ -72,13 +74,13 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    void signIn(){
+    void signIn() {
         startActivityForResult(
                 AuthUI.getInstance()
-                 .createSignInIntentBuilder()
-                 .setAvailableProviders(Arrays.asList(
-                 new AuthUI.IdpConfig.GoogleBuilder().build()))
-                .build(),
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(Arrays.asList(
+                                new AuthUI.IdpConfig.GoogleBuilder().build()))
+                        .build(),
                 RC_SIGN_IN);
     }
 
@@ -87,16 +89,18 @@ public class LoginActivity extends AppCompatActivity {
 
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == RESULT_OK) {
-                comeIn(); }
-        }}
-
-        @Override
-        public boolean onOptionsItemSelected (MenuItem item){
-            int id = item.getItemId();
-            if (id == R.id.action_settings) {
-                return true;
+                comeIn();
             }
-            return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
 

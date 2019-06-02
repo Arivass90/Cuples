@@ -14,8 +14,8 @@ public class CarneVipUser {
     //public String mediaType;
     public Map<String, Boolean> likes = new HashMap<>();
 
-    public CarneVipUser() {}
-
+    public CarneVipUser() {
+    }
 
 
     public CarneVipUser(String uid, String nombre, int edad, String sexo, String mediaUrl) {
@@ -33,7 +33,7 @@ public class CarneVipUser {
         result.put("nombre", nombre);
         result.put("edad", edad);
         result.put("sexo", sexo);
-       // result.put("mediaUrl", mediaUrl);
+        // result.put("mediaUrl", mediaUrl);
 
         return result;
     }
@@ -49,6 +49,7 @@ public class CarneVipUser {
     public String getSexo() {
         return sexo;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

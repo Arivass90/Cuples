@@ -1,4 +1,5 @@
 package com.example.alexr.couples.view.activity;
+
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
@@ -9,9 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
-
 import com.example.alexr.couples.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
